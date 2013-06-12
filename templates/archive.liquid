@@ -1,0 +1,16 @@
+{% layout "index" %}
+{% block content %} 
+	<article>
+		<h1>Archive</h1>
+		{% archive "article" %}
+		{% for item in archive.items %}
+			<h3>{{ item.year }}</h3>
+			<ul class="archive">
+			{% for post in item.children %}
+				<li><a href="{{ post.slug }}">{{ post.title }}</a></li>
+			{% endfor %}
+			</ul>
+		{% endfor %}
+	{% endarchive %}
+	</article>
+{% endblock %}

@@ -1,0 +1,2 @@
+<div class="date">Posted: <span>{{ post.date | date:'%a %b %d %Y' }}.</span> Tags: 
+{% for tag in post.tags %}<span><a href="/tag/{{ tag | downcase }}">{{ tag }}</a>{% if forloop.index != forloop.length %}, {% endif %}</span>{% endfor %}</div>

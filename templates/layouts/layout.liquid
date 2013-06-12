@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="alternate" type="application/rss+xml" href="/rss" title="RSS Feed">
+        <title>{% block title %}{{ global.title }}{% endblock %}</title>
+        <link rel="shortcut icon" type="image/ico" href="{{ "favicon.ico" | asset_url }}" />
+        {{ "app.css" | asset_url | stylesheet_tag }}
+        <link rel="stylesheet" href="{{ "layout.css" | asset_url }}" media="(min-width:1em)">
+        {{ "modernizr.min.js" | asset_url | script_tag }}
+    </head>
+    <body>
+        <div class="wrapper">
+            {% include "header" %}
+            <div class="content">
+                <article>
+                    <h1>{{ model.title }}</h1>
+                    {% assign post = model %}
+                    {% include "articles/date-tags" %}
+                    {% block content %}{% endblock %}
+                </article>
+            </div>
+            {% include "footer" %}
+        </div>
+        {% include "analytics" %}
+    </body>
+</html>

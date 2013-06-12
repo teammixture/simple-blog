@@ -1,0 +1,39 @@
+{
+    "debug": false,
+    "lintScripts": false,
+    "preprocessorLocations": "assets",
+    "preprocessorScriptOutput": "assets/js",
+    "preprocessorStyleOutput": "assets/css",
+    "projectName": "Simple Blog",
+    "projectDescription": "A Simple Mixture blog boilerplate",
+    "publishedId": null,
+    "serverHostname": null,
+    "serverPort": null,
+    "templateDirectory": "templates",
+    "templateDefaultLayout": "layout",
+    "templateDefaultPage": "index",
+    "type": "mixture",
+    "useCompass": false,
+    "simpleModePartnerServer": null,
+    "simpleModeFileTypes": null,
+    "modelSource": null,
+    "domain": null,
+    "convertHtmlOutput": null,
+    "followLeader": true,
+    "routes": [
+        {
+            "route": "page-:page",
+            "template": "index",
+            "redirect": null
+        },
+        {
+            "route": "tag/:tag",
+            "template": "index",
+            "redirect": null
+        }
+    ],
+    "customRubyPath": null,
+    "remoteDebugPort": 0,
+    "useNodeSass": false,
+    "optimiseImages": true
+}
