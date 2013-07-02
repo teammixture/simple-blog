@@ -1,7 +1,7 @@
 <article>
 	<h1>Uh oh :(</h1>
 	{% if mixture.route.tag %}
-	<p>Sorry, I couldn't fing any articles with the tag "{{ mixture.route.tag }}"</p>
+	<p>Sorry, I couldn't find any articles with the tag "{{ mixture.route.tag | uri_decode }}"</p>
 	{% else %}
 	<p>No articles have been posted here yet!</p>
 	{% endif %}
